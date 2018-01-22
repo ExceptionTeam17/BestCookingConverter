@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Best Cooking Converter</string>
+
+
+    <string name="liquids">Volume</string>
+    <string name="weight">Weight</string>
+</resources>
