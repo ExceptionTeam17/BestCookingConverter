@@ -14,7 +14,7 @@ import com.ToxicBakery.viewpager.transforms.RotateDownTransformer;
 import com.exceptionteam17.bestcookingconverter.MyPageAdapter;
 import com.exceptionteam17.bestcookingconverter.R;
 
-public class MainFragment extends Fragment {
+public final class MainFragment extends Fragment {
 
     private View view;
     private TabLayout tabLayout;
@@ -22,7 +22,8 @@ public class MainFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@Nullable LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        assert inflater != null;
         view = inflater.inflate(R.layout.fragment_main, container, false);
         initialise();
         startTabView();
@@ -35,7 +36,6 @@ public class MainFragment extends Fragment {
     }
 
     private void startTabView() {
-        //adding names of tabs
         tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.water_drop));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.best_conv_icon));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.wieght_silver));

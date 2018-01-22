@@ -1,7 +1,5 @@
 package com.exceptionteam17.bestcookingconverter;
 
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;

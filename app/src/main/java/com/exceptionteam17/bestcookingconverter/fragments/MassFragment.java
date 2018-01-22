@@ -1,5 +1,6 @@
 package com.exceptionteam17.bestcookingconverter.fragments;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -7,8 +8,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +24,6 @@ import com.exceptionteam17.bestcookingconverter.model.Consts;
 import com.exceptionteam17.bestcookingconverter.model.Database;
 import com.exceptionteam17.bestcookingconverter.R;
 
-import java.math.BigDecimal;
-import java.math.MathContext;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -35,7 +32,7 @@ import java.util.Comparator;
 import java.util.List;
 
 
-public class MassFragment extends Fragment implements View.OnClickListener{
+public final class MassFragment extends Fragment implements View.OnClickListener{
 
     private View view;
     private Spinner mainSpin, firstSpin, secondSpin;
@@ -179,6 +176,7 @@ public class MassFragment extends Fragment implements View.OnClickListener{
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private void addNumber(int i) {
 
         String text = editFrom.getText().toString().trim();
@@ -204,6 +202,7 @@ public class MassFragment extends Fragment implements View.OnClickListener{
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private void addDot() {
         String text = editFrom.getText().toString();
         int countDots = 0;
@@ -234,30 +233,22 @@ public class MassFragment extends Fragment implements View.OnClickListener{
     }
 
     private void setMainSpinnerSettings() {
-        List<String> spinnerArray =  new ArrayList<String>();
+        List<String> spinnerArray =  new ArrayList<>();
         spinnerArray.addAll(Database.ingredients.keySet());
-        Collections.sort(spinnerArray, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareTo(o2);
-            }
-        });
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 view.getContext(), android.R.layout.simple_spinner_dropdown_item, spinnerArray){
             @Override
             public View getDropDownView(int position, View convertView,
-                                        ViewGroup parent) {
+                                        @NonNull ViewGroup parent) {
                 View view = super.getDropDownView(position, convertView, parent);
                 TextView tv = (TextView) view;
                 if(position < 9) {
-                    // Set the item background color
                     tv.setBackgroundColor(Color.parseColor("#ffe7b5"));
                 }
-//                else {
-//                    // Set the alternate item background color
-//                    tv.setBackgroundColor(Color.parseColor("#FFAF89E5"));
-//                }
+                else {
+                    tv.setBackgroundColor(Color.parseColor("#ffffff"));
+                }
                 return view;
             }
         };
@@ -285,11 +276,17 @@ public class MassFragment extends Fragment implements View.OnClickListener{
 
 
     private void setFirstSpinnerSettings() {
-        List<String> spinnerArray =  new ArrayList<String>();
+        List<String> spinnerArray =  new ArrayList<>();
         spinnerArray.addAll(Consts.ML_TO.keySet());
         spinnerArray.addAll(Consts.GRAM_TO.keySet());
+        Collections.sort(spinnerArray, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
+            }
+        });
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 view.getContext(), android.R.layout.simple_spinner_dropdown_item, spinnerArray);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -314,11 +311,17 @@ public class MassFragment extends Fragment implements View.OnClickListener{
     }
 
     private void setSecondSpinnerSettings() {
-        List<String> spinnerArray =  new ArrayList<String>();
+        List<String> spinnerArray =  new ArrayList<>();
         spinnerArray.addAll(Consts.ML_TO.keySet());
         spinnerArray.addAll(Consts.GRAM_TO.keySet());
+        Collections.sort(spinnerArray, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
+            }
+        });
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 view.getContext(), android.R.layout.simple_spinner_dropdown_item, spinnerArray);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -334,7 +337,6 @@ public class MassFragment extends Fragment implements View.OnClickListener{
                 secondSpinnerStr = selected[0];
 
                 calculateAll();
-                Log.e("shasho", String.format("Choose a %s-digit PIN", 4.85475));
             }
 
             public void onNothingSelected(AdapterView<?> parent){

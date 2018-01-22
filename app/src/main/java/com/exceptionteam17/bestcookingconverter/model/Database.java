@@ -8,15 +8,15 @@ public final class Database {
     static {
         ingredients = new TreeMap<>();
         ////////////////////////////////
-        ingredients.put("Cocoa powder", 110.0);
-        ingredients.put("Flour (wheat)", 125.0);
-        ingredients.put("Salt", 240.0);
-        ingredients.put("Sugar (white cristal)", 240.0);
-        ingredients.put("Sugar (powdered)", 130.0);
-        ingredients.put("Rice (uncooked)", 210.0);
-        ingredients.put("Milk (whole)", 260.0);
-        ingredients.put("Oil (vegetable)", 210.0);
-        ingredients.put("Sour cream", 230.0);
+        ingredients.put(" Cocoa powder", 110.0);
+        ingredients.put(" Flour (wheat)", 125.0);
+        ingredients.put(" Salt", 240.0);
+        ingredients.put(" Sugar (white cristal)", 240.0);
+        ingredients.put(" Sugar (powdered)", 130.0);
+        ingredients.put(" Rice (uncooked)", 210.0);
+        ingredients.put(" Milk (whole)", 260.0);
+        ingredients.put(" Oil (vegetable)", 210.0);
+        ingredients.put(" Sour cream", 230.0);
         ///////////////////////////////
         ingredients.put("Allspice", 100.0);
         ingredients.put("Almonds (ground)", 85.0);

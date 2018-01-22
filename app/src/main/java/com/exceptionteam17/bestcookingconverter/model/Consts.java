@@ -1,6 +1,5 @@
 package com.exceptionteam17.bestcookingconverter.model;
 
-import java.util.HashMap;
 import java.util.TreeMap;
 
 public final class Consts {
@@ -9,47 +8,47 @@ public final class Consts {
     public static TreeMap<String, Double> ML_TO;
 
 
-    public static double CUP_US_IN_ML = 236.59;
+    public static final double CUP_US_IN_ML = 236.59;
 
-    public static String KG = "kg";
-    public static String GRAM = "g";
-    public static String MG = "mg";
-    public static String TON = "ton";
-    public static String OZ = "oz";
-    public static String LB = "lb";
-    public static String ST = "st";
+    public static final String KG = "kg";
+    public static final String GRAM = "g";
+    public static final String MG = "mg";
+    public static final String TON = "ton";
+    public static final String OZ = "oz";
+    public static final String LB = "lb";
+    public static final String ST = "st";
 
-    public static String ML = "ml";
-    public static String L = "l";
-    public static String CU_IN = "cu in";
-    public static String FL_OZ_LMP = "fl oz lmp";
-    public static String PT_LMP = "pt lmp";
-    public static String GAL_LMP = "gal lmp";
-    public static String FL_OZ_US = "fl oz us";
-    public static String GAL_US = "gal us";
-    public static String CUP_US_TEA = "Cup  (us / tea cup)";
-    public static String CUP_CANADA = "Cup (canadian)";
-    public static String CUP_METRIC = "Cup (eu / metric)";
-    public static String TBSP_UK = "tbsp uk";
-    public static String TBSP_UK_2 = "tbsp uk 1/2";
-    public static String TBSP_US = "tbsp us";
-    public static String TBSP_US_2 = "tbsp us 1/2";
-    public static String TBSP_METRIC = "tbsp metric";
-    public static String TBSP_METRIC_2 = "tbsp metric 1/2";
-    public static String TSP_UK = "tsp uk";
-    public static String TSP_UK_2 = "tsp uk 1/2";
-    public static String TSP_US = "tsp us";
-    public static String TSP_US_2 = "tsp us 1/2";
-    public static String TSP_METRIC = "tsp metric";
-    public static String TSP_METRIC_2 = "tsp metric 1/2";
-    public static String CUM_COFFEE_METRIC = "cup coffee metric";
-    public static String CUP_JAPAN = "Cup (japanese)";
-    public static String PINTS_US = "pints us";
-    public static String PINTS_UK = "pints uk";
-    public static String QUARTS_US = "quarts us";
-    public static String QUARTS_UK = "quarts uk";
-    public static String GILLS_US = "gills us";
-    public static String GILLS_UK = "gills uk";
+    public static final String ML = "ml";
+    public static final String L = "l";
+    public static final String CU_IN = "cu in";
+    public static final String FL_OZ_LMP = "fl oz lmp";
+    public static final String PT_LMP = "pt lmp";
+    public static final String GAL_LMP = "gal lmp";
+    public static final String FL_OZ_US = "fl oz us";
+    public static final String GAL_US = "gal us";
+    public static final String CUP_US_TEA = "Cup  (us / tea cup)";
+    public static final String CUP_CANADA = "Cup (canadian)";
+    public static final String CUP_METRIC = "Cup (eu / metric)";
+    public static final String TBSP_UK = "tbsp uk";
+    public static final String TBSP_UK_2 = "tbsp uk 1/2";
+    public static final String TBSP_US = "tbsp us";
+    public static final String TBSP_US_2 = "tbsp us 1/2";
+    public static final String TBSP_METRIC = "tbsp metric";
+    public static final String TBSP_METRIC_2 = "tbsp metric 1/2";
+    public static final String TSP_UK = "tsp uk";
+    public static final String TSP_UK_2 = "tsp uk 1/2";
+    public static final String TSP_US = "tsp us";
+    public static final String TSP_US_2 = "tsp us 1/2";
+    public static final String TSP_METRIC = "tsp metric";
+    public static final String TSP_METRIC_2 = "tsp metric 1/2";
+    public static final String CUM_COFFEE_METRIC = "cup coffee metric";
+    public static final String CUP_JAPAN = "Cup (japanese)";
+    public static final String PINTS_US = "pints us";
+    public static final String PINTS_UK = "pints uk";
+    public static final String QUARTS_US = "quarts us";
+    public static final String QUARTS_UK = "quarts uk";
+    public static final String GILLS_US = "gills us";
+    public static final String GILLS_UK = "gills uk";
 
     static{
         GRAM_TO = new TreeMap<>();

@@ -1,6 +1,7 @@
 package com.exceptionteam17.bestcookingconverter.fragments;
 
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -25,9 +26,11 @@ import com.exceptionteam17.bestcookingconverter.model.Consts;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-public class HardFragment extends Fragment implements View.OnClickListener{
+public final class HardFragment extends Fragment implements View.OnClickListener{
 
     private View view;
     private Spinner mainSpin, firstSpin, secondSpin;
@@ -194,6 +197,7 @@ public class HardFragment extends Fragment implements View.OnClickListener{
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private void addNumber(int i) {
 
         String text = editFrom.getText().toString().trim();
@@ -220,6 +224,7 @@ public class HardFragment extends Fragment implements View.OnClickListener{
     }
 
 
+    @SuppressLint("SetTextI18n")
     private void addDot() {
         String text = editFrom.getText().toString();
         int countDots = 0;
@@ -277,10 +282,16 @@ public class HardFragment extends Fragment implements View.OnClickListener{
     }
 
     private void setSpinnerSettings() {
-        List<String> spinnerArray =  new ArrayList<String>();
+        List<String> spinnerArray =  new ArrayList<>();
         spinnerArray.addAll(Consts.GRAM_TO.keySet());
+        Collections.sort(spinnerArray, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
+            }
+        });
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 view.getContext(), android.R.layout.simple_spinner_dropdown_item, spinnerArray);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

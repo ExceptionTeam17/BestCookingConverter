@@ -27,7 +27,6 @@ public class MyPageAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        //getting the items with switch/case construction
         switch (position) {
             case 0:
 //                LiquidFragment main0 = new LiquidFragment();
@@ -44,7 +43,6 @@ public class MyPageAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    //get the number of the tabs loaded
     public int getCount() {
         return numberOfTabs;
     }
