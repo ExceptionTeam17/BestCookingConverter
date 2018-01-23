@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         removeActionBar();
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544/1033173712");
+        MobileAds.initialize(this, "ca-app-pub-3532736192097860~2266394289");
         loadFragment(new MainFragment());
         mAdView = findViewById(R.id.adView);
         bannerAdd();
