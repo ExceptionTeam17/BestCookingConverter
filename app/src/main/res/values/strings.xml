@@ -4,4 +4,7 @@
 
     <string name="liquids">Volume</string>
     <string name="weight">Weight</string>
+    <string name="temperature">°F / °C</string>
+    <string name="cel">°C</string>
+    <string name="far">°F</string>
 </resources>

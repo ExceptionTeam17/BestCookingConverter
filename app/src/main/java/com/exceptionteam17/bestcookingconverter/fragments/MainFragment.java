@@ -39,6 +39,8 @@ public final class MainFragment extends Fragment {
         tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.water_drop));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.best_conv_icon));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.wieght_silver));
+        tabLayout.addTab(tabLayout.newTab().setText("°C/°F"));
+        tabLayout.setTabTextColors(Color.WHITE, Color.WHITE);
         tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setScrollPosition(1,0f,true);

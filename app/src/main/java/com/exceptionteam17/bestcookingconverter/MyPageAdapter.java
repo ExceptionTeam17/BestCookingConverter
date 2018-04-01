@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.exceptionteam17.bestcookingconverter.fragments.HardFragment;
 import com.exceptionteam17.bestcookingconverter.fragments.LiquidFragment;
 import com.exceptionteam17.bestcookingconverter.fragments.MassFragment;
+import com.exceptionteam17.bestcookingconverter.fragments.TempFragment;
 
 
 public class MyPageAdapter extends FragmentPagerAdapter {
@@ -15,6 +16,7 @@ public class MyPageAdapter extends FragmentPagerAdapter {
     private LiquidFragment main0 = new LiquidFragment();
     private MassFragment main = new MassFragment();
     private HardFragment main00 = new HardFragment();
+    private TempFragment temp  = new TempFragment();
 
     public MyPageAdapter(FragmentManager fm, int tabs) {
         super(fm);
@@ -37,6 +39,8 @@ public class MyPageAdapter extends FragmentPagerAdapter {
             case 2:
 //                HardFragment main00 = new HardFragment();
                 return main00;
+            case 3:
+                return temp;
             default:
                 return null;
         }
