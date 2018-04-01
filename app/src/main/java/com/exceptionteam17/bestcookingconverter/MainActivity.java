@@ -15,16 +15,38 @@ import com.google.android.gms.ads.MobileAds;
 public class MainActivity extends AppCompatActivity {
 
     private AdView mAdView;
+    private AdRequest adRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        removeActionBar();
         MobileAds.initialize(this, "ca-app-pub-3532736192097860~2266394289");
-        loadFragment(new MainFragment());
+        adRequest = new AdRequest.Builder().build();
+        setContentView(R.layout.activity_main);
         mAdView = findViewById(R.id.adView);
-        bannerAdd();
+        loadBannerAdd();
+
+
+        removeActionBar();
+        loadFragment(new MainFragment());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mAdView.resume();
+    }
+
+    @Override
+    protected void onPause() {
+        mAdView.pause();
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mAdView.destroy();
+        super.onDestroy();
     }
 
     private void removeActionBar() {
@@ -40,16 +62,7 @@ public class MainActivity extends AppCompatActivity {
         ft.commit();
     }
 
-    private void bannerAdd() {
-        final AdRequest adRequest = new AdRequest.Builder().build();
-//        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-//        String s = preferences.getString("firstTimeInstall", "NOO");
-//        if (s != null && !s.equals("NOO")) {
-            mAdView.loadAd(adRequest);
-//        } else {
-//            SharedPreferences.Editor editor = preferences.edit();
-//            editor.putString("firstTimeInstall", "YESS");
-//            editor.apply();
-//        }
+    private void loadBannerAdd() {
+        mAdView.loadAd(adRequest);
     }
 }
