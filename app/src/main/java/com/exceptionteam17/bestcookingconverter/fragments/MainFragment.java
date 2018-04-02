@@ -47,6 +47,7 @@ public final class MainFragment extends Fragment {
 
         final MyPageAdapter adapter = new MyPageAdapter(getChildFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(2);
         viewPager.setPageTransformer(true, new RotateDownTransformer());
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         viewPager.setCurrentItem(1);
