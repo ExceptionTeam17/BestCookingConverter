@@ -111,7 +111,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal">
 
         <TextView
@@ -131,9 +131,12 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="ml"
+            android:autoSizeTextType="uniform"
             android:textColor="@color/textColor"
-            android:textSize="13sp" />
-
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeStepGranularity="2sp" />
+<!--TODO add autoresizing to all fields-->
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
