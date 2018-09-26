@@ -1,8 +1,8 @@
 package com.exceptionteam17.bestcookingconverter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.exceptionteam17.bestcookingconverter.fragments.HardFragment;
 import com.exceptionteam17.bestcookingconverter.fragments.LiquidFragment;
