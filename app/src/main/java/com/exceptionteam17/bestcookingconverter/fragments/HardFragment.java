@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -39,6 +40,7 @@ public final class HardFragment extends Fragment implements View.OnClickListener
             vol_7, name_7,  vol_8, name_8,  vol_9, name_9,  vol_10, name_10;
     private Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_dot, btn_del, btn_clear;
     private int mainSpinePosition;
+    private AlphaAnimation buttonClickAnim;
     private String spinerPositionString;
 
     @Override
@@ -47,6 +49,7 @@ public final class HardFragment extends Fragment implements View.OnClickListener
         initialise();
         setValues();
         setSpinnerSettings();
+        buttonClickAnim = new AlphaAnimation(2F, 0.7F);
         return view;
     }
 
@@ -142,6 +145,7 @@ public final class HardFragment extends Fragment implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
+        v.startAnimation(buttonClickAnim);
         switch (v.getId()){
             case R.id.btn_1:
                 addNumber(1);

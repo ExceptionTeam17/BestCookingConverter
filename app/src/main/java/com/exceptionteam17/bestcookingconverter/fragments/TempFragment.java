@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -28,6 +29,7 @@ public class TempFragment extends Fragment implements View.OnClickListener{
     private boolean isCels;
     private Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_dot, btn_del, btn_clear;
     private ImageButton arow;
+    private AlphaAnimation buttonClickAnim;
 
 
     @Override
@@ -35,6 +37,7 @@ public class TempFragment extends Fragment implements View.OnClickListener{
         view = inflater.inflate(R.layout.convertor_temp_layout, container, false);
         initialise();
         calculateAll();
+        buttonClickAnim = new AlphaAnimation(2F, 0.7F);
         return view;
     }
 
@@ -100,6 +103,7 @@ public class TempFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+        v.startAnimation(buttonClickAnim);
         switch (v.getId()){
             case R.id.btn_1:
                 addNumber(1);
