@@ -295,14 +295,18 @@ public final class LiquidFragment extends Fragment implements View.OnClickListen
         firstSpin.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                ((TextView) firstSpin.getSelectedView()).setTextColor(Color.WHITE);
+                try {
+                    ((TextView) firstSpin.getSelectedView()).setTextColor(Color.WHITE);
+                } catch (Exception ignored){}
             }
         });
 
         secondSpin.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                ((TextView) secondSpin.getSelectedView()).setTextColor(Color.WHITE);
+                try{
+                    ((TextView) secondSpin.getSelectedView()).setTextColor(Color.WHITE);
+                } catch (Exception ignored){}
             }
         });
     }

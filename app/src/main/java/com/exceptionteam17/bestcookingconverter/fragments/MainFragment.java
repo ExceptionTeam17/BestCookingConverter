@@ -36,9 +36,9 @@ public final class MainFragment extends Fragment {
     }
 
     private void startTabView() {
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.water_drop));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.best_conv_icon));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.wieght_silver));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.water_drop));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.best_conv_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.wieght_silver));
         tabLayout.addTab(tabLayout.newTab().setText("°C/°F"));
         tabLayout.setTabTextColors(Color.WHITE, Color.WHITE);
         tabLayout.setSelectedTabIndicatorColor(Color.WHITE);

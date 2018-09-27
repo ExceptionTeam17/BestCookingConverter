@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MobileAds.initialize(this, "ca-app-pub-3532736192097860~2266394289");
-        adRequest = new AdRequest.Builder().build();
+//        MobileAds.initialize(this, "ca-app-pub-3532736192097860~2266394289");
+//        adRequest = new AdRequest.Builder().build(); //TODO
         setContentView(R.layout.activity_main);
         mAdView = findViewById(R.id.adView);
-        loadBannerAdd();
+       // loadBannerAdd();
 
 
         removeActionBar();

@@ -124,7 +124,7 @@
             android:textColor="@color/textColor"
             android:text="0.25158"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -414,7 +414,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="4dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -422,78 +422,106 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="1" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="4"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="7"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_dot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="."/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
         </LinearLayout>
 
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/white"/>
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@android:color/white"/>-->
 
 
         <LinearLayout
@@ -502,81 +530,109 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="2"/>
 
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="5"/>
 
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="8"/>
 
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="0"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
         </LinearLayout>
 
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/white"/>
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@android:color/white"/>-->
 
 
         <LinearLayout
@@ -585,78 +641,106 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="3"/>
 
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="6"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="9"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
             <Button
                 android:id="@+id/btn_del"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background"
                 android:layout_gravity="center"
                 android:textColor="@color/textColor"
                 android:textStyle="bold"
                 android:text="del"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/white"/>
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@android:color/white"/>-->
 
         <LinearLayout
             android:layout_width="0dp"
@@ -664,25 +748,35 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
-        <Button
-            android:id="@+id/btn_clear"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="#33f99d81"
-            android:textColor="#f99d81"
-            android:textStyle="bold"
-            android:text="clear"/>
-
-            <View
+            <Button
+                android:id="@+id/btn_clear"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white"/>
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:padding="5dp"
+                android:maxLines="1"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="1sp"
+                android:background="@drawable/shape_round_keyboard_background_redish"
+                android:textColor="#f99d81"
+                android:textStyle="bold"
+                android:text="clear"/>
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@android:color/white"/>-->
 
         </LinearLayout>
 
