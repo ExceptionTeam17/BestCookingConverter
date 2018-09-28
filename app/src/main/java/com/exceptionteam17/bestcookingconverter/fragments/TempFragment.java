@@ -24,8 +24,7 @@ import java.text.NumberFormat;
 public class TempFragment extends Fragment implements View.OnClickListener{
 
     private View view;
-    private EditText editFrom, editTo;
-    private TextView text1, text2;
+    private TextView text1, text2, editFrom, editTo;
     private boolean isCels;
     private Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_dot, btn_del, btn_clear;
     private ImageButton arow;
@@ -45,11 +44,11 @@ public class TempFragment extends Fragment implements View.OnClickListener{
         isCels = true;
         editFrom = view.findViewById(R.id.con_edit_1);
         editFrom.setText("0");
-        editFrom.getBackground().setColorFilter(ContextCompat.getColor(view.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
+//        editFrom.getBackground().setColorFilter(ContextCompat.getColor(view.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
         editTo = view.findViewById(R.id.con_edit_2);
         editTo.setVisibility(View.VISIBLE);
         editTo.setText("0");
-        editTo.getBackground().setColorFilter(ContextCompat.getColor(view.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
+//        editTo.getBackground().setColorFilter(ContextCompat.getColor(view.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
 
         btn_1 = view.findViewById(R.id.btn_1);
         btn_1.setOnClickListener(this);
