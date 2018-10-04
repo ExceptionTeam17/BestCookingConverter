@@ -37,7 +37,7 @@ public final class MassFragment extends Fragment implements View.OnClickListener
 
     private View view;
     private Spinner mainSpin, firstSpin, secondSpin;
-    private EditText editFrom, editTo;
+    private TextView editFrom, editTo;
     private TextView title, vol_1, name_1,  vol_2, name_2,  vol_3, name_3,  vol_4, name_4,  vol_5, name_5,  vol_6, name_6,
             vol_7, name_7,  vol_8, name_8,  vol_9, name_9,  vol_10, name_10;
     private Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_dot, btn_del, btn_clear;
@@ -66,10 +66,10 @@ public final class MassFragment extends Fragment implements View.OnClickListener
 
         editFrom = view.findViewById(R.id.con_edit_1);
         editFrom.setText("0");
-        editFrom.getBackground().setColorFilter(ContextCompat.getColor(view.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
+//        editFrom.getBackground().setColorFilter(ContextCompat.getColor(view.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
         editTo = view.findViewById(R.id.con_edit_2);
         editTo.setText("0");
-        editTo.getBackground().setColorFilter(ContextCompat.getColor(view.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
+//        editTo.getBackground().setColorFilter(ContextCompat.getColor(view.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
 
         title = view.findViewById(R.id.con_title);
         title.setVisibility(View.GONE);
