@@ -68,6 +68,8 @@ public final class HardFragment extends Fragment implements View.OnClickListener
 
         view.findViewById(R.id.viewToHide).setVisibility(View.GONE);
         view.findViewById(R.id.viewToHide2).setVisibility(View.GONE);
+        view.findViewById(R.id.viewToShow).setVisibility(View.VISIBLE);
+        view.findViewById(R.id.viewToShow2).setVisibility(View.VISIBLE);
 
         title = view.findViewById(R.id.con_title);
         title.setText(R.string.weight);
@@ -261,7 +263,7 @@ public final class HardFragment extends Fragment implements View.OnClickListener
     private void calculateAll(){
         double valInGr = Double.parseDouble(editFrom.getText().toString()) / Consts.GRAM_TO.get(spinerPositionString);
 
-        NumberFormat formatter = new DecimalFormat("#.###");
+        NumberFormat formatter = new DecimalFormat("#.##");
         String temp = formatter.format(valInGr * Consts.GRAM_TO.get(Consts.MG));
         vol_1.setText(temp.length()>15? temp.substring(0, 15) : temp);
         name_2.setText(Consts.OZ);

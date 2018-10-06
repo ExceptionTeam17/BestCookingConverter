@@ -136,7 +136,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -154,8 +155,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:layout_marginStart="2dp"
             android:gravity="center"
-            android:textSize="13sp"
             android:textColor="@color/textColor"
             app:autoSizeMinTextSize="11sp"
             app:autoSizeMaxTextSize="100sp"
@@ -168,6 +169,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:gravity="center"
             android:layout_gravity="center"
             android:text="ml"
@@ -198,6 +201,8 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 android:text="Cup (us / tea cup)"
                 android:textColor="@color/textColor"
                 app:autoSizeMinTextSize="10sp"
@@ -207,11 +212,12 @@
                 />
             <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_vol_2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:textColor="@color/textColor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:layout_marginEnd="2dp"
+                android:textColor="@color/textColor"
                 app:autoSizeMinTextSize="11sp"
                 app:autoSizeMaxTextSize="100sp"
                 app:autoSizeStepGranularity="2sp"
@@ -230,241 +236,423 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal">
 
-        <TextView
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_values_background"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_vol_3"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:textSize="13sp"
+            android:layout_marginStart="2dp"
             android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
             android:text="test"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_3"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textSize="13sp"
-            android:textColor="@color/textColor"
-            android:gravity="center"
-            android:text="test"/>
-        <View
-            android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/linesValues"
-            />
-
-        <TextView
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="ml"
+            android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"/>
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/linesValues"-->
+            <!--/>-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_values_background"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_4"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2"
-            android:textSize="13sp"
-            android:textColor="@color/textColor"
             android:gravity="center"
-            android:text="test"/>
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="ml"
+            android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_vol_4"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:textSize="13sp"
+            android:layout_marginEnd="2dp"
             android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
             android:text="test"/>
+        </LinearLayout>
     </LinearLayout>
 
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/linesValues"
-        />
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/linesValues"-->
+        <!--/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal">
 
-        <TextView
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_values_background"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_vol_5"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="test"
+            android:layout_marginStart="2dp"
             android:textColor="@color/textColor"
-            android:textSize="13sp"/>
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            android:text="test"
+            />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_5"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="test"
-            android:textColor="@color/textColor"
-            android:gravity="center"
-            android:textSize="13sp"
-            />
-        <View
-            android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/linesValues"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="ml"
+            android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
             />
-
-        <TextView
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/linesValues"-->
+            <!--/>-->
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_round_values_background"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_6"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="test"
-            android:textColor="@color/textColor"
             android:gravity="center"
-            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="ml"
+            android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
             />
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_vol_6"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="test"
+            android:layout_marginEnd="2dp"
             android:textColor="@color/textColor"
-            android:textSize="13sp"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            android:text="test"
             />
+            </LinearLayout>
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/linesValues"
-        />
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/linesValues"-->
+        <!--/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal">
-
-        <TextView
+        <View
+            android:id="@+id/viewToShow2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/shape_round_values_background"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_vol_7"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:textSize="13sp"
+            android:layout_marginStart="2dp"
             android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
             android:text="test"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_7"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textSize="13sp"
-            android:textColor="@color/textColor"
-            android:gravity="center"
-            android:text="test"/>
-
-        <View
-            android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/linesValues"
-            />
-
-        <TextView
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_gravity="center"
+            android:text="ml"
+            android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"/>
+        </LinearLayout>
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/linesValues"-->
+            <!--/>-->
+        <View
+            android:id="@+id/viewToShow"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/viewToHide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/shape_round_values_background"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_8"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2"
-            android:textSize="13sp"
-            android:textColor="@color/textColor"
             android:gravity="center"
-            android:text="test"/>
+            android:layout_gravity="center"
+            android:text="ml"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_vol_8"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:textSize="13sp"
+            android:layout_marginEnd="2dp"
             android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
             android:text="test"/>
+        </LinearLayout>
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/linesValues"
-        />
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/linesValues"-->
+        <!--/>-->
 
     <LinearLayout
+        android:id="@+id/viewToHide2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_values_background"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:orientation="horizontal">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_vol_9"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:textSize="13sp"
+            android:layout_marginStart="2dp"
             android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
             android:text="0.25158"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_9"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textSize="13sp"
-            android:textColor="@color/textColor"
-            android:gravity="center"
-            android:text="ml"/>
-
-        <View
-            android:id="@+id/viewToHide"
-            android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/linesValues"
-            />
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="ml"
+            android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"/>
+        </LinearLayout>
 
-        <TextView
+        <!--<View-->
+            <!--android:id="@+id/viewToHide"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/linesValues"-->
+            <!--/>-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_values_background"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_10"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="center"
-            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="ml"
             android:textColor="@color/textColor"
-            android:text="test"/>
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_vol_10"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:textSize="13sp"
+            android:layout_marginEnd="2dp"
             android:textColor="@color/textColor"
+            app:autoSizeMinTextSize="11sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
             android:text="264.52787"/>
+        </LinearLayout>
     </LinearLayout>
 
 
-    <View
-        android:id="@+id/viewToHide2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/linesValues"
-        />
+    <!--<View-->
+        <!--android:id="@+id/viewToHide2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/linesValues"-->
+        <!--/>-->
 
     <View
         android:layout_width="1dp"

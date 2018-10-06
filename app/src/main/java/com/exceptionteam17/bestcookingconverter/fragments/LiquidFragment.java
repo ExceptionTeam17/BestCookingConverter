@@ -317,7 +317,7 @@ public final class LiquidFragment extends Fragment implements View.OnClickListen
 
     private void calculateAll() {
         double valInMl = Double.parseDouble(editFrom.getText().toString()) / Consts.ML_TO.get(spinerPositionString);
-        NumberFormat formatter = new DecimalFormat("#.###");
+        NumberFormat formatter = new DecimalFormat("#.##");
 
         editTo.setText(formatter.format(valInMl * Consts.ML_TO.get(secondSpinnerPositionString)));
 

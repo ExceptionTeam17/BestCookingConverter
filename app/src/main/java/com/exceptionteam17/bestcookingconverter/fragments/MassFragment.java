@@ -372,7 +372,7 @@ public final class MassFragment extends Fragment implements View.OnClickListener
     }
 
     private void calculateAll() {
-        NumberFormat formatter = new DecimalFormat("#.###");
+        NumberFormat formatter = new DecimalFormat("#.##");
         double numberInEditText = Double.parseDouble(editFrom.getText().toString());
 
         if(Consts.GRAM_TO.containsKey(firstSpinerStr) && Consts.GRAM_TO.containsKey(secondSpinnerStr)){
