@@ -350,23 +350,29 @@ public final class MassFragment extends Fragment implements View.OnClickListener
         firstSpin.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                ((TextView) firstSpin.getSelectedView()).setTextColor(Color.WHITE);
+                try{
+                    ((TextView) firstSpin.getSelectedView()).setTextColor(Color.WHITE);
+                } catch (Exception ignored){}
             }
         });
 
         secondSpin.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                ((TextView) secondSpin.getSelectedView()).setTextColor(Color.WHITE);
+                try{
+                    ((TextView) secondSpin.getSelectedView()).setTextColor(Color.WHITE);
+                } catch (Exception ignored){}
             }
         });
 
         mainSpin.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                TextView text = ((TextView) mainSpin.getSelectedView());
-                text.setTextColor(Color.WHITE);
-                text.setTextSize(20);
+                try {
+                    TextView text = ((TextView) mainSpin.getSelectedView());
+                    text.setTextColor(Color.WHITE);
+                    text.setTextSize(20);
+                } catch (Exception ignored){}
             }
         });
     }

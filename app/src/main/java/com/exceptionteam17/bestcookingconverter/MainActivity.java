@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.exceptionteam17.bestcookingconverter.fragments.MainFragment;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
 
@@ -17,15 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
     private AdView mAdView;
     private AdRequest adRequest;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        MobileAds.initialize(this, "ca-app-pub-3532736192097860~2266394289");
-//        adRequest = new AdRequest.Builder().build(); //TODO
+        MobileAds.initialize(this, "ca-app-pub-3532736192097860~2266394289");
+        adRequest = new AdRequest.Builder().build();
         setContentView(R.layout.activity_main);
         mAdView = findViewById(R.id.adView);
-       // loadBannerAdd();
+        loadBannerAdd();
 
 
         removeActionBar();
@@ -40,7 +43,30 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onPause() {
+        mInterstitialAd = new InterstitialAd(this.getApplicationContext());
+        mInterstitialAd.setAdUnitId("ca-app-pub-3532736192097860/8632808619");
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mInterstitialAd.loadAd(adRequest);
+
         mAdView.pause();
+
+        mInterstitialAd.setAdListener(new AdListener(){
+            @Override
+            public void onAdLoaded() {
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                }
+            }
+
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                try{
+//                    MainActivity.this.finish();
+                    MainActivity.this.moveTaskToBack(true);
+                } catch (Exception ignored){}
+            }
+        });
         super.onPause();
     }
 

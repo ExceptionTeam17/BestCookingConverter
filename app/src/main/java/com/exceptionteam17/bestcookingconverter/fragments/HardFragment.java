@@ -323,7 +323,9 @@ public final class HardFragment extends Fragment implements View.OnClickListener
         firstSpin.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                ((TextView) firstSpin.getSelectedView()).setTextColor(Color.WHITE);
+                try {
+                    ((TextView) firstSpin.getSelectedView()).setTextColor(Color.WHITE);
+                } catch (Exception ignored){}
             }
         });
     }
