@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BestCookingConverter.iml" filepath="$PROJECT_DIR$/BestCookingConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/BestCookingConverter-app.iml" filepath="$PROJECT_DIR$/app/BestCookingConverter-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CookingConv-BestCookingConverter.iml" filepath="$PROJECT_DIR$/CookingConv-BestCookingConverter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

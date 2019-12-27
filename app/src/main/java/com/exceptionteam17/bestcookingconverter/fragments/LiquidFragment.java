@@ -2,12 +2,10 @@ package com.exceptionteam17.bestcookingconverter.fragments;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.core.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +14,6 @@ import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -33,7 +30,7 @@ import java.util.List;
 
 public final class LiquidFragment extends Fragment implements View.OnClickListener{
 
-    private View view;
+    private View myView;
     private Spinner mainSpin, firstSpin, secondSpin;
     private TextView editFrom, editTo;
     private TextView title, vol_1, name_1,  vol_2, name_2,  vol_3, name_3,  vol_4, name_4,  vol_5, name_5,  vol_6, name_6,
@@ -44,76 +41,76 @@ public final class LiquidFragment extends Fragment implements View.OnClickListen
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.convertor_layout, container, false);
+        myView = inflater.inflate(R.layout.convertor_layout, container, false);
         initialise();
         setSpinnerSettings();
         setSecondSpinnerSettings();
         buttonClickAnim = new AlphaAnimation(2F, 0.7F);
-        return view;
+        return myView;
     }
 
     private void initialise() {
         secondSpinnerPositionString = Consts.ML_TO.keySet().iterator().next();
-        mainSpin = view.findViewById(R.id.con_spinner_main);
+        mainSpin = myView.findViewById(R.id.con_spinner_main);
         mainSpin.setVisibility(View.GONE);
-        firstSpin = view.findViewById(R.id.con_spiner_1);
-        secondSpin = view.findViewById(R.id.con_spinner_2);
+        firstSpin = myView.findViewById(R.id.con_spiner_1);
+        secondSpin = myView.findViewById(R.id.con_spinner_2);
 
-        editFrom = view.findViewById(R.id.con_edit_1);
+        editFrom = myView.findViewById(R.id.con_edit_1);
         editFrom.setText("0");
-//        editFrom.getBackground().setColorFilter(ContextCompat.getColor(view.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
-        editTo = view.findViewById(R.id.con_edit_2);
+//        editFrom.getBackground().setColorFilter(ContextCompat.getColor(myView.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
+        editTo = myView.findViewById(R.id.con_edit_2);
         editTo.setText("0");
-//        editTo.getBackground().setColorFilter(ContextCompat.getColor(view.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
+//        editTo.getBackground().setColorFilter(ContextCompat.getColor(myView.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
 
-        title = view.findViewById(R.id.con_title);
+        title = myView.findViewById(R.id.con_title);
         title.setText(R.string.liquids);
-        vol_1 = view.findViewById(R.id.con_vol_1);
-        name_1 = view.findViewById(R.id.con_name_1);
-        vol_2 = view.findViewById(R.id.con_vol_2);
-        name_2 = view.findViewById(R.id.con_name_2);
-        vol_3 = view.findViewById(R.id.con_vol_3);
-        name_3 = view.findViewById(R.id.con_name_3);
-        vol_4 = view.findViewById(R.id.con_vol_4);
-        name_4 = view.findViewById(R.id.con_name_4);
-        vol_5 = view.findViewById(R.id.con_vol_5);
-        name_5 = view.findViewById(R.id.con_name_5);
-        vol_6 = view.findViewById(R.id.con_vol_6);
-        name_6 = view.findViewById(R.id.con_name_6);
-        vol_7 = view.findViewById(R.id.con_vol_7);
-        name_7 = view.findViewById(R.id.con_name_7);
-        vol_8 = view.findViewById(R.id.con_vol_8);
-        name_8 = view.findViewById(R.id.con_name_8);
-        vol_9 = view.findViewById(R.id.con_vol_9);
-        name_9 = view.findViewById(R.id.con_name_9);
-        vol_10 = view.findViewById(R.id.con_vol_10);
-        name_10 = view.findViewById(R.id.con_name_10);
+        vol_1 = myView.findViewById(R.id.con_vol_1);
+        name_1 = myView.findViewById(R.id.con_name_1);
+        vol_2 = myView.findViewById(R.id.con_vol_2);
+        name_2 = myView.findViewById(R.id.con_name_2);
+        vol_3 = myView.findViewById(R.id.con_vol_3);
+        name_3 = myView.findViewById(R.id.con_name_3);
+        vol_4 = myView.findViewById(R.id.con_vol_4);
+        name_4 = myView.findViewById(R.id.con_name_4);
+        vol_5 = myView.findViewById(R.id.con_vol_5);
+        name_5 = myView.findViewById(R.id.con_name_5);
+        vol_6 = myView.findViewById(R.id.con_vol_6);
+        name_6 = myView.findViewById(R.id.con_name_6);
+        vol_7 = myView.findViewById(R.id.con_vol_7);
+        name_7 = myView.findViewById(R.id.con_name_7);
+        vol_8 = myView.findViewById(R.id.con_vol_8);
+        name_8 = myView.findViewById(R.id.con_name_8);
+        vol_9 = myView.findViewById(R.id.con_vol_9);
+        name_9 = myView.findViewById(R.id.con_name_9);
+        vol_10 = myView.findViewById(R.id.con_vol_10);
+        name_10 = myView.findViewById(R.id.con_name_10);
 
-        btn_1 = view.findViewById(R.id.btn_1);
+        btn_1 = myView.findViewById(R.id.btn_1);
         btn_1.setOnClickListener(this);
-        btn_2 = view.findViewById(R.id.btn_2);
+        btn_2 = myView.findViewById(R.id.btn_2);
         btn_2.setOnClickListener(this);
-        btn_3 = view.findViewById(R.id.btn_3);
+        btn_3 = myView.findViewById(R.id.btn_3);
         btn_3.setOnClickListener(this);
-        btn_4 = view.findViewById(R.id.btn_4);
+        btn_4 = myView.findViewById(R.id.btn_4);
         btn_4.setOnClickListener(this);
-        btn_5 = view.findViewById(R.id.btn_5);
+        btn_5 = myView.findViewById(R.id.btn_5);
         btn_5.setOnClickListener(this);
-        btn_6 = view.findViewById(R.id.btn_6);
+        btn_6 = myView.findViewById(R.id.btn_6);
         btn_6.setOnClickListener(this);
-        btn_7 = view.findViewById(R.id.btn_7);
+        btn_7 = myView.findViewById(R.id.btn_7);
         btn_7.setOnClickListener(this);
-        btn_8 = view.findViewById(R.id.btn_8);
+        btn_8 = myView.findViewById(R.id.btn_8);
         btn_8.setOnClickListener(this);
-        btn_9 = view.findViewById(R.id.btn_9);
+        btn_9 = myView.findViewById(R.id.btn_9);
         btn_9.setOnClickListener(this);
-        btn_0 = view.findViewById(R.id.btn_0);
+        btn_0 = myView.findViewById(R.id.btn_0);
         btn_0.setOnClickListener(this);
-        btn_dot = view.findViewById(R.id.btn_dot);
+        btn_dot = myView.findViewById(R.id.btn_dot);
         btn_dot.setOnClickListener(this);
-        btn_del = view.findViewById(R.id.btn_del);
+        btn_del = myView.findViewById(R.id.btn_del);
         btn_del.setOnClickListener(this);
-        btn_clear = view.findViewById(R.id.btn_clear);
+        btn_clear = myView.findViewById(R.id.btn_clear);
         btn_clear.setOnClickListener(this);
     }
 
@@ -248,7 +245,7 @@ public final class LiquidFragment extends Fragment implements View.OnClickListen
         });
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                view.getContext(), android.R.layout.simple_spinner_dropdown_item, spinnerArray);
+                myView.getContext(), android.R.layout.simple_spinner_dropdown_item, spinnerArray);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         firstSpin.setAdapter(adapter);
@@ -274,7 +271,7 @@ public final class LiquidFragment extends Fragment implements View.OnClickListen
         spinnerArray.addAll(Consts.ML_TO.keySet());
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                view.getContext(), android.R.layout.simple_spinner_dropdown_item, spinnerArray);
+                myView.getContext(), android.R.layout.simple_spinner_dropdown_item, spinnerArray);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         secondSpin.setAdapter(adapter);

@@ -162,7 +162,7 @@
             app:autoSizeMaxTextSize="100sp"
             app:autoSizeStepGranularity="2sp"
             app:autoSizeTextType="uniform"
-            android:text="0.25158"/>
+            android:text="0"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_1"
@@ -222,7 +222,7 @@
                 app:autoSizeMaxTextSize="100sp"
                 app:autoSizeStepGranularity="2sp"
                 app:autoSizeTextType="uniform"
-            android:text="test"/>
+            android:text="0"/>
     </LinearLayout>
     </LinearLayout>
 
@@ -262,7 +262,7 @@
             app:autoSizeMaxTextSize="100sp"
             app:autoSizeStepGranularity="2sp"
             app:autoSizeTextType="uniform"
-            android:text="test"/>
+            android:text="0"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_3"
@@ -323,7 +323,7 @@
             app:autoSizeMaxTextSize="100sp"
             app:autoSizeStepGranularity="2sp"
             app:autoSizeTextType="uniform"
-            android:text="test"/>
+            android:text="0"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -364,7 +364,7 @@
             app:autoSizeMaxTextSize="100sp"
             app:autoSizeStepGranularity="2sp"
             app:autoSizeTextType="uniform"
-            android:text="test"
+            android:text="0"
             />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -427,7 +427,7 @@
             app:autoSizeMaxTextSize="100sp"
             app:autoSizeStepGranularity="2sp"
             app:autoSizeTextType="uniform"
-            android:text="test"
+            android:text="0"
             />
             </LinearLayout>
     </LinearLayout>
@@ -472,7 +472,7 @@
             app:autoSizeMaxTextSize="100sp"
             app:autoSizeStepGranularity="2sp"
             app:autoSizeTextType="uniform"
-            android:text="test"/>
+            android:text="0"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/con_name_7"
@@ -540,7 +540,7 @@
             app:autoSizeMaxTextSize="100sp"
             app:autoSizeStepGranularity="2sp"
             app:autoSizeTextType="uniform"
-            android:text="test"/>
+            android:text="0"/>
         </LinearLayout>
     </LinearLayout>
 
