@@ -151,7 +151,7 @@
             android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_vol_1"
+            android:id="@+id/vol_1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -165,7 +165,7 @@
             android:text="0"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_name_1"
+            android:id="@+id/name_1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -195,7 +195,7 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/con_name_2"
+                android:id="@+id/name_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
@@ -211,7 +211,7 @@
                 app:autoSizeTextType="uniform"
                 />
             <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_vol_2"
+            android:id="@+id/vol_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -251,7 +251,7 @@
             android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_vol_3"
+            android:id="@+id/vol_3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -265,7 +265,7 @@
             android:text="0"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_name_3"
+            android:id="@+id/name_3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -296,7 +296,7 @@
             android:paddingEnd="2dp"
             android:orientation="horizontal">
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_name_4"
+            android:id="@+id/name_4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -312,7 +312,7 @@
             app:autoSizeTextType="uniform"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_vol_4"
+            android:id="@+id/vol_4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -353,7 +353,7 @@
             android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_vol_5"
+            android:id="@+id/vol_5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -368,7 +368,7 @@
             />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_name_5"
+            android:id="@+id/name_5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -400,7 +400,7 @@
                 android:paddingEnd="2dp"
                 android:orientation="horizontal">
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_name_6"
+            android:id="@+id/name_6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -416,7 +416,7 @@
             app:autoSizeTextType="uniform"
             />
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_vol_6"
+            android:id="@+id/vol_6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -461,7 +461,7 @@
             android:paddingEnd="2dp"
             android:orientation="horizontal">
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_vol_7"
+            android:id="@+id/vol_7"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -475,7 +475,7 @@
             android:text="0"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_name_7"
+            android:id="@+id/name_7"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -513,7 +513,7 @@
             android:paddingEnd="2dp"
             android:orientation="horizontal">
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_name_8"
+            android:id="@+id/name_8"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -529,7 +529,7 @@
             app:autoSizeTextType="uniform"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_vol_8"
+            android:id="@+id/vol_8"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -568,7 +568,7 @@
             android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_vol_9"
+            android:id="@+id/vol_9"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -582,7 +582,7 @@
             android:text="0.25158"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_name_9"
+            android:id="@+id/name_9"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -615,7 +615,7 @@
             android:paddingEnd="2dp"
             android:orientation="horizontal">
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_name_10"
+            android:id="@+id/name_10"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -631,7 +631,7 @@
             app:autoSizeTextType="uniform"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/con_vol_10"
+            android:id="@+id/vol_10"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"

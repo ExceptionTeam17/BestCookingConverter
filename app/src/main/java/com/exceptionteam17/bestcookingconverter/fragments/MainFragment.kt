@@ -43,7 +43,7 @@ class MainFragment : Fragment() {
         tabLayout!!.setScrollPosition(1, 0f, true)
         val adapter = MyPageAdapter(childFragmentManager, tabLayout!!.tabCount)
         viewPager!!.adapter = adapter
-        viewPager!!.offscreenPageLimit = 2
+        viewPager!!.offscreenPageLimit = 3
         try {
             viewPager!!.setPageTransformer(true, RotateDownTransformer() as PageTransformer)
         } catch (ignored: Exception) { }
