@@ -2,6 +2,7 @@ package com.exceptionteam17.bestcookingconverter
 
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.AlphaAnimation
 import androidx.appcompat.app.AppCompatActivity
 import com.exceptionteam17.bestcookingconverter.fragments.MainFragment
 import com.google.android.gms.ads.*
@@ -76,5 +77,9 @@ class MainActivity : AppCompatActivity() {
         MobileAds.initialize(this@MainActivity, "ca-app-pub-3532736192097860~2266394289")
         adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
+    }
+
+    companion object {
+        val buttonClickAnim: AlphaAnimation = AlphaAnimation(2f, 0.7f)
     }
 }

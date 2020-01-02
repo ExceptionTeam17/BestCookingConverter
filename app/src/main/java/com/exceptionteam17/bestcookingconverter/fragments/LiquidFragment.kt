@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AlphaAnimation
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
 import androidx.fragment.app.Fragment
+import com.exceptionteam17.bestcookingconverter.MainActivity.Companion.buttonClickAnim
 import com.exceptionteam17.bestcookingconverter.R
 import com.exceptionteam17.bestcookingconverter.model.Consts
 import kotlinx.android.synthetic.main.convertor_layout.*
@@ -26,11 +26,9 @@ class LiquidFragment : Fragment(), View.OnClickListener {
     private var editTo: TextView? = null
     private var spinerPositionString: String? = null
     private var secondSpinnerPositionString: String? = null
-    private var buttonClickAnim: AlphaAnimation? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         myView = inflater.inflate(R.layout.convertor_layout, container, false)
-        buttonClickAnim = AlphaAnimation(2f, 0.7f)
         return myView
     }
 

@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AlphaAnimation
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.exceptionteam17.bestcookingconverter.MainActivity.Companion.buttonClickAnim
 import com.exceptionteam17.bestcookingconverter.R
 import kotlinx.android.synthetic.main.convertor_temp_layout.*
 import java.text.DecimalFormat
@@ -18,11 +18,9 @@ class TempFragment : Fragment(), View.OnClickListener {
     private var editFrom: TextView? = null
     private var editTo: TextView? = null
     private var isCels = false
-    private var buttonClickAnim: AlphaAnimation? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         myView = inflater.inflate(R.layout.convertor_temp_layout, container, false)
-        buttonClickAnim = AlphaAnimation(2f, 0.7f)
         return myView!!
     }
 
@@ -56,18 +54,7 @@ class TempFragment : Fragment(), View.OnClickListener {
         btn_clear.setOnClickListener(this)
         text_temp_1.setText(R.string.cel)
         text_temp_2.setText(R.string.far)
-
-        arow.setOnClickListener {
-            isCels = !isCels
-            if (isCels) {
-                text_temp_1.setText(R.string.cel)
-                text_temp_2.setText(R.string.far)
-            } else {
-                text_temp_2.setText(R.string.cel)
-                text_temp_1.setText(R.string.far)
-            }
-            calculateAll()
-        }
+        arow.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -120,6 +107,17 @@ class TempFragment : Fragment(), View.OnClickListener {
             }
             R.id.btn_clear -> {
                 clear()
+                calculateAll()
+            }
+            R.id.arow -> {
+                isCels = !isCels
+                if (isCels) {
+                    text_temp_1.setText(R.string.cel)
+                    text_temp_2.setText(R.string.far)
+                } else {
+                    text_temp_2.setText(R.string.cel)
+                    text_temp_1.setText(R.string.far)
+                }
                 calculateAll()
             }
         }
