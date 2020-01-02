@@ -3,7 +3,6 @@ package com.exceptionteam17.bestcookingconverter.model
 import java.util.*
 
 object Database {
-    @JvmField
     val ingredients: SortedMap<String, Double> = sortedMapOf(
         ////////////////////////////////
         " Cocoa powder" to 110.0,

@@ -144,10 +144,10 @@
             android:id="@+id/arow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxHeight="20dp"
-            android:maxWidth="100dp"
             android:layout_gravity="center"
-            android:background="@mipmap/ic_arows_foreground"/>
+            android:background="@mipmap/ic_arows_foreground"
+            android:maxWidth="100dp"
+            android:maxHeight="20dp" />
 
 
     </LinearLayout>
@@ -178,18 +178,18 @@
                 android:id="@+id/btn_1"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:layout_margin="4dp"
-                app:autoSizeTextType="uniform"
-                app:autoSizeMinTextSize="12sp"
-                app:autoSizeMaxTextSize="100sp"
-                app:autoSizeStepGranularity="1sp"
-                android:background="@drawable/shape_round_keyboard_background"
-                android:textColor="@color/textColor"
                 android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:background="@drawable/shape_round_keyboard_background"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:text="1" />
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform" />
 
             <!--<View-->
                 <!--android:layout_width="match_parent"-->

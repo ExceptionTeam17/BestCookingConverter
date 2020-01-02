@@ -43,7 +43,6 @@ object Consts {
     const val GILLS_US = "gills us"
     const val GILLS_UK = "gills uk"
 
-    @JvmField
     val GRAM_TO: SortedMap<String, Double> = sortedMapOf(
         MG to 1000.0,
         GRAM to 1.0,
@@ -54,7 +53,6 @@ object Consts {
         ST to 0.000157473004
     )
 
-    @JvmField
     val ML_TO: SortedMap<String, Double> = sortedMapOf(
         ML to 1.0,
         L to 0.001,

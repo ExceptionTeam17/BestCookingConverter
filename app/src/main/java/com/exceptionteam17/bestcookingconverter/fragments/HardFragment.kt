@@ -43,15 +43,15 @@ class HardFragment : Fragment(), View.OnClickListener {
 
     private fun initialise() {
         mainSpin = myView!!.findViewById(R.id.con_spinner_main)
-        mainSpin!!.setVisibility(View.GONE)
+        mainSpin!!.visibility = View.GONE
         firstSpin = myView!!.findViewById(R.id.con_spiner_1)
         secondSpin = myView!!.findViewById(R.id.con_spinner_2)
-        secondSpin!!.setVisibility(View.GONE)
+        secondSpin!!.visibility = View.GONE
         editFrom = myView!!.findViewById(R.id.con_edit_1)
-        editFrom!!.setText("0")
+        editFrom!!.text = "0"
         //        editFrom.getBackground().setColorFilter(ContextCompat.getColor(myView.getContext(), R.color.textColor), PorterDuff.Mode.SRC_ATOP);
         editTo = myView!!.findViewById(R.id.con_edit_2)
-        editTo!!.setVisibility(View.GONE)
+        editTo!!.visibility = View.GONE
         myView!!.findViewById<View>(R.id.viewToHide).visibility = View.GONE
         myView!!.findViewById<View>(R.id.viewToHide2).visibility = View.GONE
         myView!!.findViewById<View>(R.id.viewToShow).visibility = View.VISIBLE
@@ -74,19 +74,12 @@ class HardFragment : Fragment(), View.OnClickListener {
 
     private fun setValues() {
         name_1.text = Consts.MG
-        vol_1.text = "0"
         name_2.text = Consts.OZ
-        vol_2.text = "0"
         name_3.text = Consts.GRAM
-        vol_3.text = "0"
         name_4.text = Consts.LB
-        vol_4.text = "0"
         name_5.text = Consts.KG
-        vol_5.text = "0"
         name_6.text = Consts.ST
-        vol_6.text = "0"
         name_7.text = Consts.TON
-        vol_7.text = "0"
         name_8.visibility = View.INVISIBLE
         vol_8.visibility = View.INVISIBLE
         name_9.visibility = View.GONE

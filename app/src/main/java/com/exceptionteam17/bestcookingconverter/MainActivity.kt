@@ -1,30 +1,34 @@
 package com.exceptionteam17.bestcookingconverter
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import com.exceptionteam17.bestcookingconverter.fragments.MainFragment
 import com.google.android.gms.ads.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
-    private var mAdView: AdView? = null
     private var adRequest: AdRequest? = null
     private var mInterstitialAd: InterstitialAd? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        MobileAds.initialize(this, "ca-app-pub-3532736192097860~2266394289")
-        adRequest = AdRequest.Builder().build()
+        Log.e("bla", "start 11 " + System.currentTimeMillis())
+        GlobalScope.launch(Dispatchers.Main) {
+            loadBannerAdd()
+        }
         setContentView(R.layout.activity_main)
-        mAdView = findViewById(R.id.adView)
-        loadBannerAdd()
         removeActionBar()
-        loadFragment(MainFragment())
+        loadFragment()
     }
 
     override fun onResume() {
         super.onResume()
-        mAdView!!.resume()
+        adView.resume()
+        Log.e("bla", "7 " + System.currentTimeMillis())
     }
 
     override fun onPause() {
@@ -32,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         mInterstitialAd!!.adUnitId = "ca-app-pub-3532736192097860/8632808619"
         val interstitialAdRequest = AdRequest.Builder().build()
         mInterstitialAd!!.loadAd(interstitialAdRequest)
-        mAdView!!.pause()
+        adView.pause()
         mInterstitialAd!!.adListener = object : AdListener() {
             override fun onAdLoaded() {
                 if (mInterstitialAd!!.isLoaded) {
@@ -51,7 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        mAdView!!.destroy()
+        adView.destroy()
         super.onDestroy()
     }
 
@@ -61,14 +65,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadFragment(fragment: Fragment) {
+    private fun loadFragment() {
         val fm = supportFragmentManager
         val ft = fm.beginTransaction()
-        ft.replace(R.id.home_main, fragment)
+        ft.replace(R.id.home_main, MainFragment())
         ft.commit()
     }
 
     private fun loadBannerAdd() {
-        mAdView!!.loadAd(adRequest)
+        MobileAds.initialize(this@MainActivity, "ca-app-pub-3532736192097860~2266394289")
+        adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
     }
 }
