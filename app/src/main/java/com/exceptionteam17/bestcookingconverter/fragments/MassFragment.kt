@@ -183,7 +183,7 @@ class MassFragment : Fragment(), View.OnClickListener {
         spinnerArray.addAll(Database.ingredients.keys)
         val adapter: ArrayAdapter<String> = object : ArrayAdapter<String>(
                 myView!!.context, android.R.layout.simple_spinner_dropdown_item, spinnerArray) {
-            override fun getDropDownView(position: Int, convertView: View,
+            override fun getDropDownView(position: Int, convertView: View?,
                                          parent: ViewGroup): View {
                 val view = super.getDropDownView(position, convertView, parent)
                 val tv = view as TextView

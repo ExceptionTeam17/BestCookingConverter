@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,89 +11,125 @@
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="51dp"
         android:layout_gravity="top|center"
         ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-3532736192097860/5515374154"/>
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:orientation="horizontal">-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/logo"
+        />
 
-        <!--<androidx.appcompat.widget.AppCompatTextView-->
-            <!--android:id="@+id/timer_text"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_weight="3"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:textStyle="bold"-->
-            <!--android:textColor="@color/textColor"-->
-            <!--android:layout_margin="5dp"-->
-            <!--android:background="@drawable/shape_round_keyboard_background_redish"-->
-            <!--android:text="00:00:00"-->
-            <!--app:autoSizeTextType="uniform"-->
-            <!--app:autoSizeMinTextSize="15sp"-->
-            <!--app:autoSizeMaxTextSize="100sp"-->
-            <!--app:autoSizeStepGranularity="1sp"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:gravity="center"/>-->
-
-        <!--<androidx.appcompat.widget.AppCompatTextView-->
-            <!--android:id="@+id/timer_btn1"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="1"-->
-            <!--android:layout_margin="5dp"-->
-            <!--android:text="▲"-->
-            <!--android:textColor="@color/textColor"-->
-            <!--android:textStyle="bold"-->
-            <!--android:background="@drawable/shape_round_keyboard_background"-->
-            <!--app:autoSizeTextType="uniform"-->
-            <!--app:autoSizeMinTextSize="12sp"-->
-            <!--app:autoSizeMaxTextSize="100sp"-->
-            <!--app:autoSizeStepGranularity="1sp"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:gravity="center"/>-->
-        <!--<androidx.appcompat.widget.AppCompatTextView-->
-            <!--android:id="@+id/timer_btn2"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="1"-->
-            <!--android:layout_margin="5dp"-->
-            <!--android:text="▼"-->
-            <!--android:textColor="@color/textColor"-->
-            <!--android:textStyle="bold"-->
-            <!--android:background="@drawable/shape_round_keyboard_background"-->
-            <!--app:autoSizeTextType="uniform"-->
-            <!--app:autoSizeMinTextSize="12sp"-->
-            <!--app:autoSizeMaxTextSize="100sp"-->
-            <!--app:autoSizeStepGranularity="1sp"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:gravity="center"/>-->
-        <!--<androidx.appcompat.widget.AppCompatTextView-->
-            <!--android:id="@+id/timer_btn3"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="1"-->
-            <!--android:layout_margin="5dp"-->
-            <!--android:text="►"-->
-            <!--android:textColor="@color/textColor"-->
-            <!--android:textStyle="bold"-->
-            <!--android:background="@drawable/shape_round_keyboard_background"-->
-            <!--app:autoSizeTextType="uniform"-->
-            <!--app:autoSizeMinTextSize="12sp"-->
-            <!--app:autoSizeMaxTextSize="100sp"-->
-            <!--app:autoSizeStepGranularity="1sp"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:gravity="center"/>-->
-
-    <!--</LinearLayout>-->
-
-    <FrameLayout
-        android:id="@+id/home_main"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adView"
+        app:layout_constraintBottom_toTopOf="@id/tabLayout"
         android:layout_weight="1" />
 
-</LinearLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPager"
+        app:tabSelectedTextColor="#000000"
+        app:tabTextColor="#000000"
+        app:tabIndicatorColor="#ffffff"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<androidx.appcompat.widget.AppCompatTextView-->
+    <!--android:id="@+id/timer_text"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="3"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:textStyle="bold"-->
+    <!--android:textColor="@color/textColor"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:background="@drawable/shape_round_keyboard_background_redish"-->
+    <!--android:text="00:00:00"-->
+    <!--app:autoSizeTextType="uniform"-->
+    <!--app:autoSizeMinTextSize="15sp"-->
+    <!--app:autoSizeMaxTextSize="100sp"-->
+    <!--app:autoSizeStepGranularity="1sp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:gravity="center"/>-->
+
+    <!--<androidx.appcompat.widget.AppCompatTextView-->
+    <!--android:id="@+id/timer_btn1"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="▲"-->
+    <!--android:textColor="@color/textColor"-->
+    <!--android:textStyle="bold"-->
+    <!--android:background="@drawable/shape_round_keyboard_background"-->
+    <!--app:autoSizeTextType="uniform"-->
+    <!--app:autoSizeMinTextSize="12sp"-->
+    <!--app:autoSizeMaxTextSize="100sp"-->
+    <!--app:autoSizeStepGranularity="1sp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:gravity="center"/>-->
+    <!--<androidx.appcompat.widget.AppCompatTextView-->
+    <!--android:id="@+id/timer_btn2"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="▼"-->
+    <!--android:textColor="@color/textColor"-->
+    <!--android:textStyle="bold"-->
+    <!--android:background="@drawable/shape_round_keyboard_background"-->
+    <!--app:autoSizeTextType="uniform"-->
+    <!--app:autoSizeMinTextSize="12sp"-->
+    <!--app:autoSizeMaxTextSize="100sp"-->
+    <!--app:autoSizeStepGranularity="1sp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:gravity="center"/>-->
+    <!--<androidx.appcompat.widget.AppCompatTextView-->
+    <!--android:id="@+id/timer_btn3"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="►"-->
+    <!--android:textColor="@color/textColor"-->
+    <!--android:textStyle="bold"-->
+    <!--android:background="@drawable/shape_round_keyboard_background"-->
+    <!--app:autoSizeTextType="uniform"-->
+    <!--app:autoSizeMinTextSize="12sp"-->
+    <!--app:autoSizeMaxTextSize="100sp"-->
+    <!--app:autoSizeStepGranularity="1sp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:gravity="center"/>-->
+
+    <!--</LinearLayout>-->

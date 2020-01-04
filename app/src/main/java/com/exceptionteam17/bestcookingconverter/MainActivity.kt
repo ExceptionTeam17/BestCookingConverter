@@ -1,14 +1,20 @@
 package com.exceptionteam17.bestcookingconverter
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.animation.AlphaAnimation
 import androidx.appcompat.app.AppCompatActivity
-import com.exceptionteam17.bestcookingconverter.fragments.MainFragment
+import androidx.viewpager.widget.ViewPager
+import com.ToxicBakery.viewpager.transforms.RotateDownTransformer
 import com.google.android.gms.ads.*
+import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.tabLayout
+import kotlinx.android.synthetic.main.activity_main.viewPager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
@@ -18,12 +24,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.e("bla", "start 11 " + System.currentTimeMillis())
-        GlobalScope.launch(Dispatchers.Main) {
-            loadBannerAdd()
-        }
         setContentView(R.layout.activity_main)
+        GlobalScope.launch(Dispatchers.IO) {
+            loadBannerAdd()
+         }
         removeActionBar()
-        loadFragment()
+//        loadFragment()
+        startTabView()
     }
 
     override fun onResume() {
@@ -66,20 +73,52 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadFragment() {
-        val fm = supportFragmentManager
-        val ft = fm.beginTransaction()
-        ft.replace(R.id.home_main, MainFragment())
-        ft.commit()
-    }
+//    private fun loadFragment() {
+//        val fm = supportFragmentManager
+//        val ft = fm.beginTransaction()
+//        ft.replace(R.id.home_main, MainFragment())
+//        ft.commit()
+//    }
 
-    private fun loadBannerAdd() {
-        MobileAds.initialize(this@MainActivity, "ca-app-pub-3532736192097860~2266394289")
-        adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
+    private suspend fun loadBannerAdd() {
+        coroutineScope {
+            MobileAds.initialize(this@MainActivity, "ca-app-pub-3532736192097860~2266394289")
+            adRequest = AdRequest.Builder().build()
+            GlobalScope.launch(Dispatchers.Main) {
+                adView.loadAd(adRequest)
+            }
+        }
     }
 
     companion object {
         val buttonClickAnim: AlphaAnimation = AlphaAnimation(2f, 0.7f)
+    }
+
+    private fun startTabView() {
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.water_drop))
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.best_conv_icon))
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.wieght_silver))
+        tabLayout.addTab(tabLayout.newTab().setText("°C/°F"))
+        tabLayout.setTabTextColors(Color.WHITE, Color.WHITE)
+        tabLayout.setSelectedTabIndicatorColor(Color.WHITE)
+        tabLayout.tabGravity = TabLayout.GRAVITY_FILL
+        tabLayout.setScrollPosition(1, 0f, true)
+        val adapter = MyPageAdapter(supportFragmentManager, tabLayout.tabCount)
+        viewPager.adapter = adapter
+        viewPager.offscreenPageLimit = 3
+        try {
+            viewPager.setPageTransformer(true, RotateDownTransformer() as ViewPager.PageTransformer)
+        } catch (ignored: Exception) { }
+
+        viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
+        viewPager.currentItem = 1
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                viewPager.currentItem = tab.position
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab) {}
+            override fun onTabReselected(tab: TabLayout.Tab) {}
+        })
     }
 }
