@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
             loadBannerAdd()
          }
         removeActionBar()
-//        loadFragment()
         startTabView()
     }
 
@@ -73,13 +72,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    private fun loadFragment() {
-//        val fm = supportFragmentManager
-//        val ft = fm.beginTransaction()
-//        ft.replace(R.id.home_main, MainFragment())
-//        ft.commit()
-//    }
-
     private suspend fun loadBannerAdd() {
         coroutineScope {
             MobileAds.initialize(this@MainActivity, "ca-app-pub-3532736192097860~2266394289")
@@ -88,10 +80,6 @@ class MainActivity : AppCompatActivity() {
                 adView.loadAd(adRequest)
             }
         }
-    }
-
-    companion object {
-        val buttonClickAnim: AlphaAnimation = AlphaAnimation(2f, 0.7f)
     }
 
     private fun startTabView() {
@@ -120,5 +108,9 @@ class MainActivity : AppCompatActivity() {
             override fun onTabUnselected(tab: TabLayout.Tab) {}
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })
+    }
+
+    companion object {
+        val buttonClickAnim: AlphaAnimation = AlphaAnimation(2f, 0.7f)
     }
 }
